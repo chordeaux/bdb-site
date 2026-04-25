@@ -37,12 +37,12 @@ export default function Home() {
               alt="BDB logo"
               width={550}
               height={300}
-              className="mx-auto block"
+              className="mx-auto block w-full max-w-[240px] sm:max-w-[380px] md:max-w-[550px] h-auto"
               priority
             />
           </FadeIn>
           <FadeIn delay={200} direction="up" duration={800}>
-            <h1 style={{ fontFamily: 'var(--font-melodrama)' }} className="text-8xl font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
+            <h1 style={{ fontFamily: 'var(--font-melodrama)' }} className="text-4xl sm:text-6xl md:text-8xl font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
               Bureau des Bachelors
             </h1>
           </FadeIn>
@@ -126,7 +126,7 @@ export default function Home() {
             </h2>
           </FadeIn>
           <FadeIn delay={150} duration={700}>
-            <div className="flex flex-wrap items-center justify-center gap-12">
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
               <SGLogo className="" />
               <Image
                 src="/Auto-ecole-Paris-Saclay-Gif-blanc.png"

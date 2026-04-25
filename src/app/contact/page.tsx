@@ -30,7 +30,7 @@ function ContactCard({ member }: { member: Member }) {
 
 const colsClass: Record<number, string> = {
     3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-    4: "grid-cols-2 lg:grid-cols-4",
+    4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
 };
 
 function Section({ title, members, cols = 3 }: { title: string; members: Member[]; cols?: number }) {
