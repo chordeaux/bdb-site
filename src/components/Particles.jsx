@@ -107,12 +107,14 @@ const Particles = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({
-      dpr: pixelRatio,
-      depth: false,
-      alpha: true
-    });
+    let renderer;
+    try {
+      renderer = new Renderer({ dpr: pixelRatio, depth: false, alpha: true });
+    } catch (e) {
+      return;
+    }
     const gl = renderer.gl;
+    if (!gl) return;
     container.appendChild(gl.canvas);
     gl.clearColor(0, 0, 0, 0);
 
@@ -219,9 +221,10 @@ const Particles = ({
         container.removeEventListener('mousemove', handleMouseMove);
       }
       cancelAnimationFrame(animationFrameId);
-      if (container.contains(gl.canvas)) {
+      if (gl?.canvas && container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }
+      gl?.getExtension('WEBGL_lose_context')?.loseContext();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
