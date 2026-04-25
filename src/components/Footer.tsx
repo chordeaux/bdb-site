@@ -54,6 +54,7 @@ export default function Footer() {
                 {[
                   { label: "BScGE Instagram", href: "https://www.instagram.com/bsc_ge/" },
                   { label: "BScAIDAMS Instagram", href: "https://www.instagram.com/bsc_aidams/" },
+                  { label: "BDB Instagram", href: "https://www.instagram.com/bdb_cs/"},
                 ].map(({ label, href }) => (
                   <li key={label}>
                     <a

@@ -9,15 +9,6 @@ export interface Event {
 
 export const Events: Event[] = [
   {
-    slug: "desintegration-week",
-    title: "Desintegration Week",
-    date: "",
-    location: "",
-    description:
-      "An end-of-year trip for bachelor students to celebrate making it through the year together.",
-    body: "Desintegration Week is the BDB's end-of-year celebration trip for bachelor students. After a full year of hard work, it's time to let loose and enjoy a well-deserved getaway with your cohort. It's the perfect way to close out the year and make memories with the people you've spent it with.",
-  },
-  {
     slug: "bdb-gala",
     title: "BDB Gala",
     date: "June 2026",
