@@ -2,7 +2,8 @@ export interface Member {
     name : String
     photo : String
     email : String
-    title : String
+    title ?: String
+    phone ?: String
 }
 
 export const Contacts : Member[] = [
@@ -10,7 +11,8 @@ export const Contacts : Member[] = [
         name : "Alessia Baumgartner",
         photo : "",
         email : "alessia.baumgarter@student-cs.fr",
-        title : "President"
+        title : "President",
+        phone : "+44 7436 381167"
     },
     {
         name : "Mel Ribadeau Dumas",
@@ -22,13 +24,15 @@ export const Contacts : Member[] = [
         name : "Romane Nicolas",
         photo : "",
         email : "romane.nicolas@student-cs.fr",
-        title : "Secretary General"
+        title : "Secretary General",
+        phone : "+33 7 49 41 07 50"
     },
     {
         name : "Noé Pichonnier",
         photo : "",
         email : "noe.pichonnier@student-cs.fr",
-        title : "VP Sponsors"
+        title : "VP Sponsors",
+        phone : "+352 621 368 404"
     },
     {
         name : "Marie Battesti",
@@ -108,26 +112,22 @@ export const BogeClassReps : Member[] = [
     {
         name : "Hippolyte Briancon",
         photo : "",
-        email : "hippolyte.briancon@student-cs.fr",
-        title : ""
+        email : "hippolyte.briancon@student-cs.fr"
     },
     {
         name : "Maya Chalouhi",
         photo : "",
-        email : "maya.chalouhi@student-cs.fr",
-        title : ""
+        email : "maya.chalouhi@student-cs.fr"
     },
     {
         name : "Sylvie Focacci",
         photo : "",
-        email : "sylvie.focacci@student-cs.fr",
-        title : ""
+        email : "sylvie.focacci@student-cs.fr"
     },
     {
         name : "Pauline Prunier",
         photo : "",
-        email : "pauline.prunier@student-cs.fr",
-        title : ""
+        email : "pauline.prunier@student-cs.fr"
     },
 ]
 
@@ -135,79 +135,66 @@ export const ProgramAmbassadors : Member[] = [
     {
         name : "Remy Ward",
         photo : "",
-        email : "remy.ward@student-cs.fr",
-        title : ""
+        email : "remy.ward@student-cs.fr"
     },
     {
         name : "Lea Roccaserra",
         photo : "",
-        email : "léa.roccaserra@student-cs.fr",
-        title : ""
+        email : "léa.roccaserra@student-cs.fr"
     },
     {
         name : "Kayla Villanueva de Raeve",
         photo : "",
-        email : "kayla.villanueva@student-cs.fr",
-        title : ""
+        email : "kayla.villanueva@student-cs.fr"
     },
     {
         name : "Marie-Hélène Roemer",
         photo : "",
-        email : "marie-helene-huyen-tran.roemer@student-cs.fr",
-        title : ""
+        email : "marie-helene-huyen-tran.roemer@student-cs.fr"
     },
     {
         name : "Timothée Bonin",
         photo : "",
-        email : "timothee.bonin@student-cs.fr",
-        title : ""
+        email : "timothee.bonin@student-cs.fr"
     },
     {
         name : "Elsa Hölzer",
         photo : "",
-        email : "elsa.holzer@student-cs.fr",
-        title : ""
+        email : "elsa.holzer@student-cs.fr"
     },
     {
         name : "Adrien Blachier",
         photo : "",
-        email : "adrien.blachier@student-cs.fr",
-        title : ""
+        email : "adrien.blachier@student-cs.fr"
     },
     {
         name : "Maé Coulon",
         photo : "",
-        email : "mae.coulon@student-cs.fr",
-        title : ""
+        email : "mae.coulon@student-cs.fr"
     },
     {
         name : "Louise Priolet",
         photo : "",
-        email : "louise.priolet@student-cs.fr",
-        title : ""
+        email : "louise.priolet@student-cs.fr"
     },
     {
         name : "Clara Moragas Chanel",
         photo : "",
-        email : "clara.moragaschanel@mail.mcgill.ca",
-        title : ""
+        email : "clara.moragaschanel@mail.mcgill.ca"
     },
     {
         name : "Sofia Molinaro",
         photo : "",
-        email : "sofia.molinaro@mail.mcgill.ca",
-        title : ""
+        email : "sofia.molinaro@mail.mcgill.ca"
     },
     {
         name : "Elsa Singer",
         photo : "",
-        email : "elsa.singer@mail.mcgill.ca",
-        title : ""
+        email : "elsa.singer@mail.mcgill.ca"
     },
     {
         name : "Elena Alvarez Sotomayor",
         photo : "",
-        email : "elena.alvarez-sotomayor@mail.mcgill.ca",
-        title : ""
+        email : "elena.alvarez-sotomayor@mail.mcgill.ca"
     },
 ]

@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Contacts, BogeClassReps, ProgramAmbassadors, Member } from "@/data/contact"
 
-function ContactCard({ member }: { member: Member }) {
+function ContactCard({ member, showPhone = false }: { member: Member; showPhone?: boolean }) {
     const initials = member.name
         .toString()
         .split(" ")
@@ -16,7 +16,7 @@ function ContactCard({ member }: { member: Member }) {
             </div>
             <div className="text-center">
                 <p className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">{member.name}</p>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">{member.title}</p>
+                {member.title && <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">{member.title}</p>}
             </div>
             <a
                 href={`mailto:${member.email}`}
@@ -24,6 +24,14 @@ function ContactCard({ member }: { member: Member }) {
             >
                 {member.email}
             </a>
+            {showPhone && member.phone && (
+                <a
+                    href={`tel:${member.phone}`}
+                    className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-brand-blue"
+                >
+                    {member.phone}
+                </a>
+            )}
         </div>
     );
 }
@@ -33,7 +41,7 @@ const colsClass: Record<number, string> = {
     4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
 };
 
-function Section({ title, members, cols = 3 }: { title: string; members: Member[]; cols?: number }) {
+function Section({ title, members, cols = 3, showPhone = false }: { title: string; members: Member[]; cols?: number; showPhone?: boolean }) {
     return (
         <section className="border-b border-zinc-200 dark:border-zinc-800 last:border-b-0">
             <div className="mx-auto max-w-5xl px-6 py-16">
@@ -43,7 +51,7 @@ function Section({ title, members, cols = 3 }: { title: string; members: Member[
                 ) : (
                     <div className={`grid gap-6 ${colsClass[cols] ?? colsClass[3]}`}>
                         {members.map((member) => (
-                            <ContactCard key={member.email.toString()} member={member} />
+                            <ContactCard key={member.email.toString()} member={member} showPhone={showPhone} />
                         ))}
                     </div>
                 )}
@@ -54,7 +62,7 @@ function Section({ title, members, cols = 3 }: { title: string; members: Member[
 
 export default function Contact() {
     const bdbReps = Contacts.filter((m) =>
-        ["President", "Secretary General", "VP Sponsors"].includes(m.title.toString())
+        ["President", "Secretary General", "VP Sponsors"].includes(m.title?.toString() ?? "")
     );
 
     return (
@@ -72,7 +80,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            <Section title="BDB Representatives" members={bdbReps} />
+            <Section title="BDB Representatives" members={bdbReps} showPhone />
             <Section title="BoGE Class Representatives" members={BogeClassReps} cols={4} />
             <Section title="Program Ambassadors" members={ProgramAmbassadors} />
 

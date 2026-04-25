@@ -132,9 +132,11 @@ export default function About() {
                 <p className="font-semibold text-zinc-900 dark:text-zinc-50">
                   {member.name as string}
                 </p>
-                <p className="mt-0.5 text-xs font-medium uppercase tracking-widest text-brand-orange">
-                  {member.title as string}
-                </p>
+                {member.title && (
+                  <p className="mt-0.5 text-xs font-medium uppercase tracking-widest text-brand-orange">
+                    {member.title as string}
+                  </p>
+                )}
                 <a
                   href={`mailto:${member.email as string}`}
                   className="mt-3 text-xs text-zinc-500 hover:text-brand-blue dark:text-zinc-400 truncate"
