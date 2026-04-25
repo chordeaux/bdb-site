@@ -35,9 +35,9 @@ export default function Program() {
       <Navbar />
 
       {/* Page header */}
-      <section className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+      <section className="header-gradient">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-orange">
             CentraleSupélec
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -63,13 +63,13 @@ export default function Program() {
                 rel="noopener noreferrer"
                 className="group flex flex-col rounded-xl border border-zinc-200 bg-zinc-50 p-6 transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900"
               >
-                <h3 className="mb-2 text-base font-semibold text-zinc-900 group-hover:text-zinc-600 dark:text-zinc-50 dark:group-hover:text-zinc-300">
+                <h3 className="mb-2 text-base font-semibold text-zinc-900 group-hover:text-brand-blue dark:text-zinc-50 dark:group-hover:text-brand-blue">
                   {program.name}
                 </h3>
                 <p className="flex-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                   {program.description}
                 </p>
-                <span className="mt-4 text-xs font-medium text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
+                <span className="mt-4 text-xs font-medium text-zinc-400 group-hover:text-brand-blue">
                   Learn more →
                 </span>
               </a>

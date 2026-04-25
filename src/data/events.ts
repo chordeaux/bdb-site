@@ -9,13 +9,13 @@ export interface Event {
 
 export const Events: Event[] = [
   {
-    slug: "welcome-week",
-    title: "Welcome Week",
+    slug: "desintegration-week",
+    title: "Desintegration Week",
     date: "",
     location: "",
     description:
-      "Our annual integration week for new bachelor students — meet your cohort, explore the campus, and kick off the year right.",
-    body: "Welcome Week is the BDB's flagship integration event. Over the course of a week, new bachelor students get to meet their cohort, discover the campus, and participate in activities designed to make them feel at home from day one. Past editions have included team challenges, city tours, and social evenings.",
+      "An end-of-year trip for bachelor students to celebrate making it through the year together.",
+    body: "Desintegration Week is the BDB's end-of-year celebration trip for bachelor students. After a full year of hard work, it's time to let loose and enjoy a well-deserved getaway with your cohort. It's the perfect way to close out the year and make memories with the people you've spent it with.",
   },
   {
     slug: "bdb-gala",
@@ -23,8 +23,8 @@ export const Events: Event[] = [
     date: "June 2026",
     location: "TBD",
     description:
-      "The highlight of the year. A formal evening with dinner, music, and surprises for all bachelor students.",
-    body: "The BDB Gala is the most anticipated event of the year. Dress up and join your fellow bachelor students for a formal evening of dinner, music, and surprises. Tickets are made available to all bachelor students in the weeks leading up to the event.",
+      "The highlight of the year. A night at a chateau with fancy food, music, and good company for all bachelor students.",
+    body: "The BDB Gala is the most anticipated event of the year. Set in a chateau, it's a night of fancy bites, great music, and unforgettable moments with your fellow bachelor students. Dress up and come ready to celebrate. Tickets are made available to all bachelor students in the weeks leading up to the event.",
   },
   {
     slug: "valentines",
@@ -32,7 +32,7 @@ export const Events: Event[] = [
     date: "February 2026",
     location: "TBD",
     description:
-      "",
-    body: "",
+      "Personalized rose delivery. Is there someone you want to receive flowers? A friend, special someone, or professor? We got you covered.",
+    body: "On Valentine's day, we give you the opportunity to send however many roses you like to anyone you want, along with a special message if you'd like, and we'll deliver it for you!",
   },
 ]

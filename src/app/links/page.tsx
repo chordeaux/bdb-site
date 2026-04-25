@@ -33,7 +33,7 @@ const categories: LinkCategory[] = [
         description: 
         <>
           Upload documents to print. Follow instructions{" "}
-          <a href="https://mycs.centralesupelec.fr/fr/impression/eleves" className="underline text-blue-500" target="_blank" rel="noopener noreferrer">here</a>.
+          <a href="https://mycs.centralesupelec.fr/fr/impression/eleves" className="underline text-brand-blue" target="_blank" rel="noopener noreferrer">here</a>.
         </>
       },
     ],
@@ -62,17 +62,17 @@ const categories: LinkCategory[] = [
 
 function LinkCard({ link }: { link: LinkItem }) {
   return (
-    <a
-      href={link.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex flex-col gap-1 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-sm hover:shadow-md transition-shadow hover:border-zinc-300 dark:hover:border-zinc-700"
-    >
-      <span className="text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:underline">
-        {link.label}
-      </span>
+    <div className="flex flex-col gap-2 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-sm hover:shadow-md transition-shadow hover:border-zinc-300 dark:hover:border-zinc-700">
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-base font-semibold text-brand-blue hover:underline"
+      >
+        {link.label} →
+      </a>
       <span className="text-sm text-zinc-500 dark:text-zinc-400">{link.description}</span>
-    </a>
+    </div>
   );
 }
 
@@ -81,9 +81,9 @@ export default function Links() {
     <div className="min-h-screen bg-white dark:bg-zinc-950">
       <Navbar />
 
-      <div className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="header-gradient">
         <div className="mx-auto max-w-4xl px-6 py-16">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-orange">
             Resources
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">

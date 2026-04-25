@@ -5,6 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-gold: var(--brand-gold);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -48,6 +51,14 @@
 }
 
 :root {
+  --brand-blue: #4A90D9;
+  --brand-orange: #E8651A;
+  --brand-gold: #F5B800;
+  --hg-a: #d8ecf7;
+  --hg-b: #e4d9f2;
+  --hg-c: #f7e2d4;
+  --hg-d: #f5edca;
+  --hg-fade: white;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -83,6 +94,11 @@
 }
 
 .dark {
+  --hg-a: #18222e;
+  --hg-b: #1e1828;
+  --hg-c: #2a1c16;
+  --hg-d: #271f10;
+  --hg-fade: #09090b;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -114,6 +130,25 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer utilities {
+  .header-gradient {
+    position: relative;
+    background:
+      linear-gradient(to bottom, transparent 40%, var(--hg-fade) 100%),
+      linear-gradient(to right, var(--hg-a), var(--hg-b), var(--hg-c), var(--hg-d));
+  }
+
+  .header-gradient::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border) 15%, var(--border) 85%, transparent);
+  }
 }
 
 @layer base {

@@ -18,15 +18,15 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
       <Navbar />
 
       {/* Header */}
-      <section className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+      <section className="header-gradient">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <Link
             href="/events"
-            className="mb-6 inline-block text-xs font-semibold uppercase tracking-widest text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300"
+            className="mb-6 inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue hover:opacity-80"
           >
             ← All events
           </Link>
-          <p className="mb-2 text-sm font-medium text-zinc-400 dark:text-zinc-500">
+          <p className="mb-2 text-sm font-medium text-brand-orange">
             {event.date} · {event.location}
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">

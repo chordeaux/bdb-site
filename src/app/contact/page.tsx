@@ -11,7 +11,7 @@ function ContactCard({ member }: { member: Member }) {
 
     return (
         <div className="flex flex-col items-center gap-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-8 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center justify-center w-20 h-20 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 text-2xl font-semibold tracking-wide">
+            <div className="flex items-center justify-center w-20 h-20 rounded-full bg-brand-blue/10 text-brand-blue text-2xl font-semibold tracking-wide">
                 {initials}
             </div>
             <div className="text-center">
@@ -20,7 +20,7 @@ function ContactCard({ member }: { member: Member }) {
             </div>
             <a
                 href={`mailto:${member.email}`}
-                className="text-sm text-blue-600 dark:text-blue-400 hover:underline break-all"
+                className="text-sm text-brand-blue hover:underline break-all"
             >
                 {member.email}
             </a>
@@ -61,9 +61,9 @@ export default function Contact() {
         <div className="min-h-screen bg-white dark:bg-zinc-950">
             <Navbar />
 
-            <div className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="header-gradient">
                 <div className="mx-auto max-w-4xl px-6 py-16">
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-orange">
                         Get in touch
                     </p>
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">

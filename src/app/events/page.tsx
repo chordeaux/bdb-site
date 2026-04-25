@@ -10,7 +10,11 @@ import { Events as events, Event } from "@/data/events";
 
 function isPast(dateStr: string): boolean {
   if (!dateStr) return false;
-  const d = new Date(dateStr);
+  let d = new Date(dateStr);
+  if (isNaN(d.getTime())) {
+    const m = dateStr.match(/^(\w+)\s+(\d{4})$/);
+    if (m) d = new Date(`${m[1]} 1, ${m[2]}`);
+  }
   return !isNaN(d.getTime()) && d < new Date();
 }
 
@@ -33,7 +37,7 @@ function EventCard({ event, index }: { event: Event; index: number }) {
         <p className="flex-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
           {event.description}
         </p>
-        <span className="mt-4 text-xs font-medium text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
+        <span className="mt-4 text-xs font-medium text-zinc-400 group-hover:text-brand-blue">
           Learn more →
         </span>
       </Link>
@@ -47,10 +51,10 @@ export default function Services() {
       <Navbar />
 
       {/* Page header */}
-      <section className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+      <section className="header-gradient">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <FadeContent duration={400}>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-orange">
               What we do
             </p>
           </FadeContent>

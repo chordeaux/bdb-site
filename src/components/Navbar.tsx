@@ -18,7 +18,7 @@ function NavDropdown({ label, items }: { label: string; items: DropdownItem[] })
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <button className="flex items-center gap-1 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50">
+      <button className="flex items-center gap-1 text-sm font-medium text-zinc-600 hover:text-brand-blue dark:text-zinc-400 dark:hover:text-brand-blue">
         {label}
         <svg
           className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
@@ -35,7 +35,7 @@ function NavDropdown({ label, items }: { label: string; items: DropdownItem[] })
       </button>
 
       {open && (
-        <div className="absolute left-0 top-full z-20 w-52 pt-2">
+        <div className="absolute left-0 top-full z-20 w-52 pt-2 animate-in fade-in slide-in-from-top-2 duration-150">
         <div className="rounded-xl border border-zinc-200 bg-white py-1 shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
           {items.map((item) => (
             <a
@@ -66,7 +66,7 @@ export default function Navbar() {
         <div className="flex items-center gap-8">
           <a
             href="/"
-            className="animate-in fade-in slide-in-from-top-2 fill-mode-both duration-500 delay-100 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            className="animate-in fade-in slide-in-from-top-2 fill-mode-both duration-500 delay-100 text-sm font-medium text-zinc-600 hover:text-brand-blue dark:text-zinc-400 dark:hover:text-brand-blue"
           >
             Home
           </a>
@@ -95,7 +95,7 @@ export default function Navbar() {
 
           <a
             href="/contact"
-            className="animate-in fade-in slide-in-from-top-2 fill-mode-both duration-500 delay-500 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            className="animate-in fade-in slide-in-from-top-2 fill-mode-both duration-500 delay-500 text-sm font-medium text-zinc-600 hover:text-brand-blue dark:text-zinc-400 dark:hover:text-brand-blue"
           >
             Contact Us
           </a>

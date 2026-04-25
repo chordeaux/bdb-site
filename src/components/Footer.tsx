@@ -36,7 +36,7 @@ export default function Footer() {
                   <li key={href}>
                     <a
                       href={href}
-                      className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                      className="text-sm text-zinc-600 hover:text-brand-blue dark:text-zinc-400 dark:hover:text-brand-blue"
                     >
                       {label}
                     </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                      className="text-sm text-zinc-600 hover:text-brand-blue dark:text-zinc-400 dark:hover:text-brand-blue"
                     >
                       {label}
                     </a>

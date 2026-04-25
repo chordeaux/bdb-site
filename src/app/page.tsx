@@ -62,7 +62,7 @@ export default function Home() {
             {/* Events */}
             <FadeIn delay={100} duration={600}>
               <a href="/events" className="group flex flex-col rounded-xl border border-zinc-200 bg-white p-8 transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950 h-full">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-orange">
                   What we do
                 </p>
                 <h3 className="mb-3 text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -71,7 +71,7 @@ export default function Home() {
                 <p className="flex-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                   From integration week to the annual gala, we run the events that define your bachelor years.
                 </p>
-                <span className="mt-6 text-xs font-medium text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
+                <span className="mt-6 text-xs font-medium text-zinc-400 group-hover:text-brand-blue">
                   See events →
                 </span>
               </a>
@@ -80,7 +80,7 @@ export default function Home() {
             {/* Clubs */}
             <FadeIn delay={200} duration={600}>
               <a href="/clubs" className="group flex flex-col rounded-xl border border-zinc-200 bg-white p-8 transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950 h-full">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-orange">
                   Community
                 </p>
                 <h3 className="mb-3 text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -89,7 +89,7 @@ export default function Home() {
                 <p className="flex-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                   We support and grow clubs for bachelor students. Have an idea? We'll help you get it started.
                 </p>
-                <span className="mt-6 text-xs font-medium text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
+                <span className="mt-6 text-xs font-medium text-zinc-400 group-hover:text-brand-blue">
                   See clubs →
                 </span>
               </a>
@@ -98,7 +98,7 @@ export default function Home() {
             {/* Representation */}
             <FadeIn delay={300} duration={600}>
               <a href="/about" className="group flex flex-col rounded-xl border border-zinc-200 bg-white p-8 transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950 h-full">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-orange">
                   Your voice
                 </p>
                 <h3 className="mb-3 text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -107,7 +107,7 @@ export default function Home() {
                 <p className="flex-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                   We make sure bachelor students are heard, respected, and well-represented within the school.
                 </p>
-                <span className="mt-6 text-xs font-medium text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
+                <span className="mt-6 text-xs font-medium text-zinc-400 group-hover:text-brand-blue">
                   Meet the team →
                 </span>
               </a>

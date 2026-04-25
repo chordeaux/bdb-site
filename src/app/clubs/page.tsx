@@ -10,10 +10,10 @@ export default function Clubs() {
       <Navbar />
 
       {/* Page header */}
-      <section className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+      <section className="header-gradient">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <FadeIn direction="none" duration={500}>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-orange">
               Community
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -30,7 +30,7 @@ export default function Clubs() {
             {clubs.map((club, i) => (
               <FadeIn key={club.name} delay={i * 80} duration={600}>
                 <div className="flex flex-col rounded-xl border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900 h-full">
-                  <span className="mb-1 text-xs font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+                  <span className="mb-1 text-xs font-medium uppercase tracking-widest text-brand-orange">
                     {club.category}
                   </span>
                   <h3 className="mb-2 text-base font-semibold text-zinc-900 dark:text-zinc-50">
@@ -60,7 +60,7 @@ export default function Clubs() {
             </p>
             <Link
               href="/contact"
-              className="inline-block rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+              className="inline-block rounded-md bg-brand-blue px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90"
             >
               Contact us
             </Link>

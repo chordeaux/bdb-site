@@ -10,9 +10,9 @@ export default function About() {
       <Navbar />
 
       {/* Page header */}
-      <section className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+      <section className="header-gradient">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-orange">
             Who we are
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -48,7 +48,7 @@ export default function About() {
 
             {/* Events card */}
             <div className="flex flex-col rounded-xl border border-zinc-200 bg-zinc-50 p-8 dark:border-zinc-800 dark:bg-zinc-900">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-orange">
                 What we do
               </p>
               <h2 className="mb-4 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -63,7 +63,7 @@ export default function About() {
               <div className="mt-8">
                 <Link
                   href="/events"
-                  className="inline-block rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+                  className="inline-block rounded-md bg-brand-blue px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90"
                 >
                   See our events
                 </Link>
@@ -72,7 +72,7 @@ export default function About() {
 
             {/* Clubs card */}
             <div className="flex flex-col rounded-xl border border-zinc-200 bg-zinc-50 p-8 dark:border-zinc-800 dark:bg-zinc-900">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-orange">
                 Community
               </p>
               <h2 className="mb-4 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -84,7 +84,7 @@ export default function About() {
                 Feel free to{" "}
                 <Link
                   href="/contact"
-                  className="underline text-zinc-900 dark:text-zinc-50 hover:text-zinc-600 dark:hover:text-zinc-400"
+                  className="underline text-brand-blue hover:opacity-80"
                 >
                   contact us
                 </Link>{" "}
@@ -93,7 +93,7 @@ export default function About() {
               <div className="mt-8">
                 <Link
                   href="/clubs"
-                  className="inline-block rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+                  className="inline-block rounded-md bg-brand-blue px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90"
                 >
                   See our clubs
                 </Link>
@@ -116,7 +116,7 @@ export default function About() {
                 key={member.email as string}
                 className="flex flex-col rounded-xl border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900"
               >
-                <div className="mb-4 h-16 w-16 rounded-full bg-zinc-200 dark:bg-zinc-700 overflow-hidden">
+                <div className="mb-4 h-16 w-16 rounded-full bg-brand-blue/10 overflow-hidden">
                   {member.photo ? (
                     <img
                       src={member.photo as string}
@@ -124,7 +124,7 @@ export default function About() {
                       className="h-full w-full object-cover"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center text-xl font-bold text-zinc-400 dark:text-zinc-500">
+                    <div className="flex h-full w-full items-center justify-center text-xl font-bold text-brand-blue">
                       {(member.name as string).charAt(0)}
                     </div>
                   )}
@@ -132,12 +132,12 @@ export default function About() {
                 <p className="font-semibold text-zinc-900 dark:text-zinc-50">
                   {member.name as string}
                 </p>
-                <p className="mt-0.5 text-xs font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+                <p className="mt-0.5 text-xs font-medium uppercase tracking-widest text-brand-orange">
                   {member.title as string}
                 </p>
                 <a
                   href={`mailto:${member.email as string}`}
-                  className="mt-3 text-xs text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 truncate"
+                  className="mt-3 text-xs text-zinc-500 hover:text-brand-blue dark:text-zinc-400 truncate"
                 >
                   {member.email as string}
                 </a>
