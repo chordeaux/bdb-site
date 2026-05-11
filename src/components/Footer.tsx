@@ -52,7 +52,7 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 {[
-                  { label: "BScGE Instagram", href: "https://www.instagram.com/bsc_ge/" },
+                  { label: "BScGE Instagram", href: "https://www.instagram.com/bge_cs.mcgill/" },
                   { label: "BScAIDAMS Instagram", href: "https://www.instagram.com/bsc_aidams/" },
                   { label: "BDB Instagram", href: "https://www.instagram.com/bdb_cs/"},
                 ].map(({ label, href }) => (
